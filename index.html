@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhav & Eva — No Brakes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Anton&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sacramento&family=Archivo+Black&family=Playfair+Display:ital,wght@0,700;1,700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>★</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cur" id="cur-dot"></div>
+  <div class="cur cur-ring" id="cur-ring"></div>
+  <div class="scroll-prog" id="scroll-prog"></div>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <span class="nav-logo">Madhav & Eva</span>
+    <a href="#vote" class="nav-btn" data-magnetic>Vote Apr 15–16</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO: LICENSE PLATE CENTER STAGE            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Highway road perspective -->
+    <div class="hero-highway" id="hero-highway"></div>
+
+    <!-- Palm Drive — palm trees lining the road -->
+    <div class="palm palm--l" style="--px:25%;--py:52%;--s:0.25"></div>
+    <div class="palm palm--l" style="--px:20%;--py:40%;--s:0.42"></div>
+    <div class="palm palm--l" style="--px:15%;--py:28%;--s:0.62"></div>
+    <div class="palm palm--l" style="--px:9%;--py:16%;--s:0.85"></div>
+    <div class="palm palm--l" style="--px:3%;--py:4%;--s:1.1"></div>
+    <div class="palm palm--r" style="--px:25%;--py:52%;--s:0.25"></div>
+    <div class="palm palm--r" style="--px:20%;--py:40%;--s:0.42"></div>
+    <div class="palm palm--r" style="--px:15%;--py:28%;--s:0.62"></div>
+    <div class="palm palm--r" style="--px:9%;--py:16%;--s:0.85"></div>
+    <div class="palm palm--r" style="--px:3%;--py:4%;--s:1.1"></div>
+
+    <!-- Red convertible driving down Palm Drive -->
+    <div class="hero-car-main" id="hero-car-main">
+      <svg class="car-svg" viewBox="0 0 200 130" fill="none">
+        <path d="M12 92C12 78 18 68 28 60L48 40C56 32 66 28 78 28H122C134 28 144 32 152 40L172 60C182 68 188 78 188 92V108C188 112 186 114 182 114H18C14 114 12 112 12 108Z" fill="#c0392b"/>
+        <rect x="48" y="32" width="104" height="30" rx="12" fill="#992020" stroke="#b03030" stroke-width=".8"/>
+        <rect x="58" y="38" width="32" height="18" rx="6" fill="#d4a87c"/>
+        <rect x="110" y="38" width="32" height="18" rx="6" fill="#d4a87c"/>
+        <rect x="67" y="33" width="14" height="7" rx="4" fill="#c09060"/>
+        <rect x="119" y="33" width="14" height="7" rx="4" fill="#c09060"/>
+        <rect x="16" y="74" width="24" height="10" rx="4" fill="#cc1818"/>
+        <rect x="160" y="74" width="24" height="10" rx="4" fill="#cc1818"/>
+        <rect x="18" y="76" width="20" height="6" rx="3" fill="#ff3030" opacity=".6"/>
+        <rect x="162" y="76" width="20" height="6" rx="3" fill="#ff3030" opacity=".6"/>
+        <rect x="68" y="90" width="64" height="16" rx="3" fill="#f5f5f0" stroke="#aaa" stroke-width=".5"/>
+        <rect x="20" y="108" width="160" height="4" rx="2" fill="#999"/>
+        <rect x="4" y="62" width="12" height="6" rx="2" fill="#c0392b" transform="rotate(-10 10 65)"/>
+        <rect x="184" y="62" width="12" height="6" rx="2" fill="#c0392b" transform="rotate(10 190 65)"/>
+      </svg>
+    </div>
+
+    <p class="hero-eyebrow">for ASSU Exec.</p>
+
+    <div class="plate" id="plate">
+      <div class="plate-shine" id="plate-shine"></div>
+      <div class="plate-holo" id="plate-holo"></div>
+
+      <div class="plate-bolt plate-bolt--tl"></div>
+      <div class="plate-bolt plate-bolt--tr"></div>
+      <div class="plate-bolt plate-bolt--bl"></div>
+      <div class="plate-bolt plate-bolt--br"></div>
+
+      <div class="plate-reg">
+        <span class="plate-reg-text">APR 2026</span>
+      </div>
+
+      <span class="plate-state">Stanford</span>
+      <h1 class="plate-chars" id="plate-chars">MADHAV & EVA</h1>
+      <span class="plate-tagline">no brakes</span>
+    </div>
+
+    <p class="hero-slogan">on the interstate baby</p>
+
+    <div class="hero-below">
+      <div class="hero-cta">
+        <a href="#platform" class="hero-btn" data-magnetic>The Platform ↓</a>
+        <a href="#vote" class="hero-btn hero-btn--alt" data-magnetic>Vote Apr 15–16 ★</a>
+      </div>
+      <p class="hero-scroll" id="hero-scroll">scroll to ride ↓</p>
+    </div>
+  </section>
+
+  <!-- ═══ ROAD DIVIDER ═══ -->
+  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
+
+  <!-- MARQUEE -->
+  <div class="marquee marquee--red">
+    <div class="marquee-track">
+      <span>NO BRAKES!! ✦ MADHAV & EVA FOR ASSU ✦ VOTE APR 15–16 ✦ ON THE INTERSTATE BABY ✦ NO BRAKES!! ✦ MADHAV & EVA FOR ASSU ✦ VOTE APR 15–16 ✦ ON THE INTERSTATE BABY ✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE PLATFORM                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="platform" id="platform">
+    <div class="platform-header">
+      <h2 class="retro-text retro-text--yellow platform-title">The Platform</h2>
+      <p class="platform-hook">Why no brakes? Because we're on the interstate baby.</p>
+      <p class="acrostic"><span class="ac-letter">N</span>aughty · <span class="ac-letter">O</span>pinionated · <span class="ac-letter">B</span>old · <span class="ac-letter">R</span>estless · <span class="ac-letter">A</span>mbitious · <span class="ac-letter">K</span>ind · <span class="ac-letter">E</span>arnest · <span class="ac-letter">S</span>weethearts</p>
+    </div>
+
+    <div class="pledges">
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">01</span>
+        <div class="pledge-body">
+          <h3>All-Campus Functions</h3>
+          <p>Bring back the events everyone's been missing. Put money back in the hands of orgs that program for the people.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">02</span>
+        <div class="pledge-body">
+          <h3>Frosh & Transfer Access</h3>
+          <p>Dedicated ASSU position for underclassmen engagement. Make the Row, Greek, and campus events open to everyone.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">03</span>
+        <div class="pledge-body">
+          <h3>Row Programming Fund</h3>
+          <p>The budget was 40% lower this year. We'll restore it and back orgs that throw for the people.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">04</span>
+        <div class="pledge-body">
+          <h3>Student Athletics</h3>
+          <p>We broke records in student engagement this year. Now make pre- and post-games worth showing up for.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">05</span>
+        <div class="pledge-body">
+          <h3>Free Merch Drops</h3>
+          <p>Student-designed, monthly drops. We only print the stuff you actually want.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">06</span>
+        <div class="pledge-body">
+          <h3>Full Transparency</h3>
+          <p>Track every dollar, every grant, every meeting. Public portal so you can hold us accountable.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">07</span>
+        <div class="pledge-body">
+          <h3>Free Speech & Protest</h3>
+          <p>We will support free speech and protest and refuse to be apolitical.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">08</span>
+        <div class="pledge-body">
+          <h3>Housing Reform</h3>
+          <p>Protect co-ops, theme houses, fix OCS, and fight for the housing process you deserve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ROAD + MARQUEE ═══ -->
+  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
+  <div class="marquee marquee--yellow">
+    <div class="marquee-track marquee-track--reverse">
+      <span>★ THE CLASSICS ★ 70+ EVENTS FUNDED ★ MADHAV & EVA ★ THE CLASSICS ★ 70+ EVENTS FUNDED ★ MADHAV & EVA ★&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE CLASSICS — EVENT FLYER COLLAGE          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="classics" id="classics">
+    <div class="section-header">
+      <h2 class="retro-text retro-text--red section-title">The Classics</h2>
+      <p class="section-sub">Events we've thrown. 70+ funded. Here's a taste.</p>
+    </div>
+    <div class="flyer-masonry">
+      <div class="flyer-card" data-tilt><img src="img/full-moon.png" alt="Full Moon on the Quad"><span class="flyer-label">Full Moon on the Quad</span></div>
+      <div class="flyer-card" data-tilt><img src="img/day-n-mayfield.png" alt="Day N Mayfield"><span class="flyer-label">Day N Mayfield</span></div>
+      <div class="flyer-card" data-tilt><img src="img/down-to-funk.png" alt="Down to Funk"><span class="flyer-label">Down to Funk</span></div>
+      <div class="flyer-card" data-tilt><img src="img/houseparty.png" alt="Faculty + Students Houseparty"><span class="flyer-label">Faculty Houseparty</span></div>
+      <div class="flyer-card" data-tilt><img src="img/rents-due.png" alt="'Rents Due"><span class="flyer-label">'Rents Due</span></div>
+      <div class="flyer-card" data-tilt><img src="img/town-hall.png" alt="Town Hall"><span class="flyer-label">Town Hall</span></div>
+      <div class="flyer-card" data-tilt><img src="img/crochella.png" alt="Crochella"><span class="flyer-label">Crochella</span></div>
+      <div class="flyer-card" data-tilt><img src="img/wasted-tuition.png" alt="Wasted Tuition"><span class="flyer-label">Wasted Tuition</span></div>
+      <div class="flyer-card" data-tilt><img src="img/dance-of-dead.png" alt="Dance of the Dead"><span class="flyer-label">Dance of the Dead</span></div>
+      <div class="flyer-card" data-tilt><img src="img/nomad.png" alt="NOMAD"><span class="flyer-label">NOMAD</span></div>
+      <div class="flyer-card" data-tilt><img src="img/raveyard.png" alt="RAVEYARD"><span class="flyer-label">RAVEYARD</span></div>
+      <div class="flyer-card" data-tilt><img src="img/street-meat.png" alt="Street Meat"><span class="flyer-label">Street Meat</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ ROAD ═══ -->
+  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE COVERS                                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="covers" id="covers">
+    <div class="section-header">
+      <h2 class="retro-text retro-text--yellow section-title">The Covers</h2>
+      <p class="section-sub section-sub--light">Iconic duos. Iconic albums. Recreated by us.</p>
+    </div>
+    <div class="covers-grid">
+      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#1a1a2e,#0f3460);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#0c0c0c,#2d1f00);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#2d1b69,#44107a);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#b44d12,#f0a050);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#0c3547,#267871);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#e8e0d4,#d4c5a9);"><div class="cover-placeholder" style="color:rgba(0,0,0,0.15);">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+    </div>
+  </section>
+
+  <!-- ═══ ROAD ═══ -->
+  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- MEET THE DUO                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="duo" id="duo">
+    <div class="section-header">
+      <h2 class="retro-text retro-text--red section-title">Meet the Duo</h2>
+    </div>
+    <div class="duo-grid">
+      <div class="duo-card" data-tilt>
+        <div class="duo-photo" style="background:linear-gradient(145deg,#A41034 40%,#d4543a);"><div class="duo-initial">M</div></div>
+        <div class="duo-info">
+          <span class="duo-role">President</span>
+          <h3 class="duo-name">Madhav</h3>
+          <p class="duo-bio">Runs FLiCKS, Day N Mayfield, Date Drop, Full Moon on The Quad, Faculty Houseparty, Row Trick or Treat, 'Rents Due. Administered the Row Programming Fund. KSig Social Chair. Fought for room reservations, housing assignment reform, and admin transparency.</p>
+        </div>
+      </div>
+      <div class="duo-card" data-tilt>
+        <div class="duo-photo" style="background:linear-gradient(145deg,#1a5c6b 40%,#5F9EA0);"><div class="duo-initial">E</div></div>
+        <div class="duo-info">
+          <span class="duo-role">Vice President</span>
+          <h3 class="duo-name">Eva</h3>
+          <p class="duo-bio">Co-ran FMOTQ with Madhav both years. Crothers president running Crochella frosh year. Sophomore Formal at the Cantor. Farm Fridays, Notes from the Farm, Stanford Sierra Camp twice. Theta pledge mom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ROAD ═══ -->
+  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ON THE ROAD — CALENDAR                     -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="upcoming" id="upcoming">
+    <div class="section-header">
+      <h2 class="retro-text retro-text--red section-title">Catch Us on the Road</h2>
+      <p class="section-sub">Live from the calendar. Updated in real time.</p>
+    </div>
+    <div class="events-feed" id="events-feed">
+      <div class="events-loading">Loading events...</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee marquee--red">
+    <div class="marquee-track">
+      <span>VOTE MADHAV & EVA ✦ APR 15–16 ✦ NO BRAKES!! ✦ VOTE MADHAV & EVA ✦ APR 15–16 ✦ NO BRAKES!! ✦ VOTE MADHAV & EVA ✦ APR 15–16 ✦ NO BRAKES!! ✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- VOTE                                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="vote" id="vote">
+    <div class="vote-inner">
+      <p class="vote-eyebrow">Election Day</p>
+      <h2 class="retro-text retro-text--red vote-heading">VOTE<br>MADHAV & EVA</h2>
+      <p class="vote-dates">April 15 – 16, 2026</p>
+      <a href="#" class="vote-btn" id="vote-btn" data-magnetic>CAST YOUR VOTE ★</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Madhav & Eva</span>
+      <span>ASSU Exec 2026</span>
+      <span>No Brakes!! ★</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
