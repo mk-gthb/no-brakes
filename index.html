@@ -4,10 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madhav & Eva — No Brakes</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Madhav & Eva — No Brakes">
+  <meta property="og:description" content="Vote Madhav & Eva for ASSU Exec. No brakes, on the interstate baby. April 15–16, 2026.">
+  <meta property="og:image" content="https://madhavandeva.com/img/og-share.png">
+  <meta property="og:url" content="https://madhavandeva.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Madhav & Eva — No Brakes">
+  <meta name="twitter:description" content="Vote Madhav & Eva for ASSU Exec. No brakes, on the interstate baby. April 15–16, 2026.">
+  <meta name="twitter:image" content="https://madhavandeva.com/img/og-share.png">
+
+  <meta name="description" content="Vote Madhav & Eva for ASSU Exec. No brakes, on the interstate baby. April 15–16, 2026.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Anton&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sacramento&family=Archivo+Black&family=Playfair+Display:ital,wght@0,700;1,700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>★</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Anton&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sacramento&family=Archivo+Black&family=Playfair+Display:ital,wght@0,700;1,700&family=Share+Tech+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="64x64">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +36,8 @@
 
   <!-- Nav -->
   <nav class="nav" id="nav">
-    <span class="nav-logo">Madhav & Eva</span>
-    <a href="#vote" class="nav-btn" data-magnetic>Vote Apr 15–16</a>
+    <a href="https://www.instagram.com/nobrakesforstanford" target="_blank" rel="noopener" class="nav-logo">Madhav & Eva</a>
+    <a href="https://www.assu.stanford.edu/elections" target="_blank" rel="noopener" class="nav-btn" data-magnetic>Vote Apr 15–16</a>
   </nav>
 
   <!-- ═══════════════════════════════════════════ -->
@@ -30,17 +47,19 @@
     <!-- Highway road perspective -->
     <div class="hero-highway" id="hero-highway"></div>
 
-    <!-- Palm Drive — palm trees lining the road -->
-    <div class="palm palm--l" style="--px:25%;--py:52%;--s:0.25"></div>
-    <div class="palm palm--l" style="--px:20%;--py:40%;--s:0.42"></div>
-    <div class="palm palm--l" style="--px:15%;--py:28%;--s:0.62"></div>
-    <div class="palm palm--l" style="--px:9%;--py:16%;--s:0.85"></div>
-    <div class="palm palm--l" style="--px:3%;--py:4%;--s:1.1"></div>
-    <div class="palm palm--r" style="--px:25%;--py:52%;--s:0.25"></div>
-    <div class="palm palm--r" style="--px:20%;--py:40%;--s:0.42"></div>
-    <div class="palm palm--r" style="--px:15%;--py:28%;--s:0.62"></div>
-    <div class="palm palm--r" style="--px:9%;--py:16%;--s:0.85"></div>
-    <div class="palm palm--r" style="--px:3%;--py:4%;--s:1.1"></div>
+    <!-- Palm Drive — trees follow the road's vanishing lines -->
+    <!-- Road left edge: 0% at bottom → 44% at vanishing point (55% up) -->
+    <!-- px = (py/55)*44 puts tree ON the road edge -->
+    <div class="palm palm--l" style="--px:37%;--py:47%;--s:0.18"></div>
+    <div class="palm palm--l" style="--px:29%;--py:37%;--s:0.35"></div>
+    <div class="palm palm--l" style="--px:20%;--py:25%;--s:0.52"></div>
+    <div class="palm palm--l" style="--px:10%;--py:13%;--s:0.72"></div>
+    <div class="palm palm--l" style="--px:1%;--py:1%;--s:0.95"></div>
+    <div class="palm palm--r" style="--px:37%;--py:47%;--s:0.18"></div>
+    <div class="palm palm--r" style="--px:29%;--py:37%;--s:0.35"></div>
+    <div class="palm palm--r" style="--px:20%;--py:25%;--s:0.52"></div>
+    <div class="palm palm--r" style="--px:10%;--py:13%;--s:0.72"></div>
+    <div class="palm palm--r" style="--px:1%;--py:1%;--s:0.95"></div>
 
     <!-- Red convertible driving down Palm Drive -->
     <div class="hero-car-main" id="hero-car-main">
@@ -55,31 +74,19 @@
         <rect x="160" y="74" width="24" height="10" rx="4" fill="#cc1818"/>
         <rect x="18" y="76" width="20" height="6" rx="3" fill="#ff3030" opacity=".6"/>
         <rect x="162" y="76" width="20" height="6" rx="3" fill="#ff3030" opacity=".6"/>
-        <rect x="68" y="90" width="64" height="16" rx="3" fill="#f5f5f0" stroke="#aaa" stroke-width=".5"/>
+        <image href="img/plate.png" x="80" y="78" width="40" height="21" preserveAspectRatio="xMidYMid meet"/>
         <rect x="20" y="108" width="160" height="4" rx="2" fill="#999"/>
         <rect x="4" y="62" width="12" height="6" rx="2" fill="#c0392b" transform="rotate(-10 10 65)"/>
         <rect x="184" y="62" width="12" height="6" rx="2" fill="#c0392b" transform="rotate(10 190 65)"/>
       </svg>
     </div>
 
-    <p class="hero-eyebrow">for ASSU Exec.</p>
+    <p class="hero-eyebrow">NO BRAKES</p>
 
     <div class="plate" id="plate">
       <div class="plate-shine" id="plate-shine"></div>
       <div class="plate-holo" id="plate-holo"></div>
-
-      <div class="plate-bolt plate-bolt--tl"></div>
-      <div class="plate-bolt plate-bolt--tr"></div>
-      <div class="plate-bolt plate-bolt--bl"></div>
-      <div class="plate-bolt plate-bolt--br"></div>
-
-      <div class="plate-reg">
-        <span class="plate-reg-text">APR 2026</span>
-      </div>
-
-      <span class="plate-state">Stanford</span>
-      <h1 class="plate-chars" id="plate-chars">MADHAV & EVA</h1>
-      <span class="plate-tagline">no brakes</span>
+      <img src="img/plate.png" alt="Madhav & Eva for ASSU Exec — Vote April 15/16" class="plate-img">
     </div>
 
     <p class="hero-slogan">on the interstate baby</p>
@@ -87,7 +94,7 @@
     <div class="hero-below">
       <div class="hero-cta">
         <a href="#platform" class="hero-btn" data-magnetic>The Platform ↓</a>
-        <a href="#vote" class="hero-btn hero-btn--alt" data-magnetic>Vote Apr 15–16 ★</a>
+        <a href="https://www.assu.stanford.edu/elections" target="_blank" rel="noopener" class="hero-btn hero-btn--alt" data-magnetic>Vote Apr 15–16 ★</a>
       </div>
       <p class="hero-scroll" id="hero-scroll">scroll to ride ↓</p>
     </div>
@@ -99,7 +106,7 @@
   <!-- MARQUEE -->
   <div class="marquee marquee--red">
     <div class="marquee-track">
-      <span>NO BRAKES!! ✦ MADHAV & EVA FOR ASSU ✦ VOTE APR 15–16 ✦ ON THE INTERSTATE BABY ✦ NO BRAKES!! ✦ MADHAV & EVA FOR ASSU ✦ VOTE APR 15–16 ✦ ON THE INTERSTATE BABY ✦&nbsp;</span>
+      <span>NO BRAKES!! ✦ MADHAV & EVA FOR ASSU ✦ VOTE APR 15–16 ✦ NO BRAKES!! ✦ MADHAV & EVA FOR ASSU ✦ VOTE APR 15–16 ✦&nbsp;</span>
     </div>
   </div>
 
@@ -110,64 +117,77 @@
     <div class="platform-header">
       <h2 class="retro-text retro-text--yellow platform-title">The Platform</h2>
       <p class="platform-hook">Why no brakes? Because we're on the interstate baby.</p>
-      <p class="acrostic"><span class="ac-letter">N</span>aughty · <span class="ac-letter">O</span>pinionated · <span class="ac-letter">B</span>old · <span class="ac-letter">R</span>estless · <span class="ac-letter">A</span>mbitious · <span class="ac-letter">K</span>ind · <span class="ac-letter">E</span>arnest · <span class="ac-letter">S</span>weethearts</p>
     </div>
 
     <div class="pledges">
       <div class="pledge" data-tilt>
         <span class="pledge-n">01</span>
         <div class="pledge-body">
-          <h3>All-Campus Functions</h3>
-          <p>Bring back the events everyone's been missing. Put money back in the hands of orgs that program for the people.</p>
+          <h3>All Campus Functions</h3>
+          <p>Bring back the open parties everyone's been missing by putting money back in the hands of orgs that program for the people!</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">02</span>
         <div class="pledge-body">
-          <h3>Frosh & Transfer Access</h3>
-          <p>Dedicated ASSU position for underclassmen engagement. Make the Row, Greek, and campus events open to everyone.</p>
+          <h3>Frosh & Underclassmen Pathways</h3>
+          <p>Dedicated cabinet position for underclassmen engagement focused on making The Row, Greek, and other spaces more accessible to all.</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">03</span>
         <div class="pledge-body">
-          <h3>Row Programming Fund</h3>
-          <p>The budget was 40% lower this year. We'll restore it and back orgs that throw for the people.</p>
+          <h3>Row Programming</h3>
+          <p>The Row Programming Fund was 40% smaller this year than in 2023, we want to expand its scope, and have the administrative backing to execute.</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">04</span>
         <div class="pledge-body">
-          <h3>Student Athletics</h3>
-          <p>We broke records in student engagement this year. Now make pre- and post-games worth showing up for.</p>
+          <h3>Nerd Nation</h3>
+          <p>We broke records in student engagement this year, and we will continue to build a culture that celebrates the union of the nerd and the athlete. Pres and Posts worth showing up for!</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">05</span>
         <div class="pledge-body">
-          <h3>Free Merch Drops</h3>
-          <p>Student-designed, monthly drops. We only print the stuff you actually want.</p>
+          <h3>Free Speech & Protest</h3>
+          <p>Finding ways to support and encourage free speech and protest across all spaces and all times. We refuse to be apolitical.</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">06</span>
         <div class="pledge-body">
-          <h3>Full Transparency</h3>
-          <p>Track every dollar, every grant, every meeting. Public portal so you can hold us accountable.</p>
+          <h3>Transparency</h3>
+          <p>You should be able to track every dollar we spend and every grant we approve. See how we spend every hour on a new ASSU tracking portal.</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">07</span>
         <div class="pledge-body">
-          <h3>Free Speech & Protest</h3>
-          <p>We will support free speech and protest and refuse to be apolitical.</p>
+          <h3>Housing Reform</h3>
+          <p>Investigate the CRL process, protect co-ops, theme houses, fix OCS, and fight for the housing process transparency you deserve.</p>
         </div>
       </div>
       <div class="pledge" data-tilt>
         <span class="pledge-n">08</span>
         <div class="pledge-body">
-          <h3>Housing Reform</h3>
-          <p>Protect co-ops, theme houses, fix OCS, and fight for the housing process you deserve.</p>
+          <h3>Coterms, Transfers, Internationals</h3>
+          <p>Dedicated spaces for affinity, accompanied by programming to support transitional periods in a student's life.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">09</span>
+        <div class="pledge-body">
+          <h3>Event Planning 2.0</h3>
+          <p>Figure out what's going on with the room booking situation, work orders, permits and licenses. Workshop a simple, intuitive process to plan an event.</p>
+        </div>
+      </div>
+      <div class="pledge" data-tilt>
+        <span class="pledge-n">10</span>
+        <div class="pledge-body">
+          <h3>Student-Designed Merch</h3>
+          <p>You loved the Big Game shirt drops, and we'll do limited drops of free student designed merch every month—and we'll only print the stuff you want.</p>
         </div>
       </div>
     </div>
@@ -187,10 +207,11 @@
   <section class="classics" id="classics">
     <div class="section-header">
       <h2 class="retro-text retro-text--red section-title">The Classics</h2>
-      <p class="section-sub">Events we've thrown. 70+ funded. Here's a taste.</p>
+      <p class="section-sub">Events we've thrown. A taste of what's to come.</p>
     </div>
     <div class="flyer-masonry">
       <div class="flyer-card" data-tilt><img src="img/full-moon.png" alt="Full Moon on the Quad"><span class="flyer-label">Full Moon on the Quad</span></div>
+      <div class="flyer-card" data-tilt><img src="img/full-moon-2.jpg" alt="Full Moon on the Quad 2"><span class="flyer-label">Full Moon on the Quad</span></div>
       <div class="flyer-card" data-tilt><img src="img/day-n-mayfield.png" alt="Day N Mayfield"><span class="flyer-label">Day N Mayfield</span></div>
       <div class="flyer-card" data-tilt><img src="img/down-to-funk.png" alt="Down to Funk"><span class="flyer-label">Down to Funk</span></div>
       <div class="flyer-card" data-tilt><img src="img/houseparty.png" alt="Faculty + Students Houseparty"><span class="flyer-label">Faculty Houseparty</span></div>
@@ -202,27 +223,13 @@
       <div class="flyer-card" data-tilt><img src="img/nomad.png" alt="NOMAD"><span class="flyer-label">NOMAD</span></div>
       <div class="flyer-card" data-tilt><img src="img/raveyard.png" alt="RAVEYARD"><span class="flyer-label">RAVEYARD</span></div>
       <div class="flyer-card" data-tilt><img src="img/street-meat.png" alt="Street Meat"><span class="flyer-label">Street Meat</span></div>
-    </div>
-  </section>
-
-  <!-- ═══ ROAD ═══ -->
-  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- THE COVERS                                  -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="covers" id="covers">
-    <div class="section-header">
-      <h2 class="retro-text retro-text--yellow section-title">The Covers</h2>
-      <p class="section-sub section-sub--light">Iconic duos. Iconic albums. Recreated by us.</p>
-    </div>
-    <div class="covers-grid">
-      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#1a1a2e,#0f3460);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
-      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#0c0c0c,#2d1f00);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
-      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#2d1b69,#44107a);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
-      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#b44d12,#f0a050);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
-      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#0c3547,#267871);"><div class="cover-placeholder">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
-      <div class="cover-card" data-tilt><div class="cover-img" style="background:linear-gradient(135deg,#e8e0d4,#d4c5a9);"><div class="cover-placeholder" style="color:rgba(0,0,0,0.15);">PLACEHOLDER</div></div><p class="cover-name">Placeholder</p><p class="cover-ref">Photo coming soon</p></div>
+      <div class="flyer-card" data-tilt><img src="img/flicks.png" alt="FLiCKS"><span class="flyer-label">FLiCKS</span></div>
+      <div class="flyer-card" data-tilt><img src="img/row-trick-or-treat.jpg" alt="Row Trick or Treat"><span class="flyer-label">Row Trick or Treat</span></div>
+      <div class="flyer-card" data-tilt><img src="img/wtf-art-party.jpg" alt="WTF: An Art Party"><span class="flyer-label">WTF: An Art Party</span></div>
+      <div class="flyer-card" data-tilt><img src="img/berlin.jpg" alt="Berlin"><span class="flyer-label">Berlin</span></div>
+      <div class="flyer-card" data-tilt><img src="img/soph-formal.jpg" alt="Soph Formal: Secret Garden"><span class="flyer-label">Soph Formal</span></div>
+      <div class="flyer-card" data-tilt><img src="img/eurotrash.jpg" alt="Eurotrash"><span class="flyer-label">Eurotrash</span></div>
+      <div class="flyer-card" data-tilt><img src="img/date-drop.png" alt="Stanford Date Drop"><span class="flyer-label">Date Drop</span></div>
     </div>
   </section>
 
@@ -238,20 +245,165 @@
     </div>
     <div class="duo-grid">
       <div class="duo-card" data-tilt>
-        <div class="duo-photo" style="background:linear-gradient(145deg,#A41034 40%,#d4543a);"><div class="duo-initial">M</div></div>
+        <div class="duo-photo"><img src="img/madhav-headshot.jpg" alt="Madhav" class="duo-photo-img"></div>
         <div class="duo-info">
           <span class="duo-role">President</span>
           <h3 class="duo-name">Madhav</h3>
-          <p class="duo-bio">Runs FLiCKS, Day N Mayfield, Date Drop, Full Moon on The Quad, Faculty Houseparty, Row Trick or Treat, 'Rents Due. Administered the Row Programming Fund. KSig Social Chair. Fought for room reservations, housing assignment reform, and admin transparency.</p>
+          <p class="duo-bio">Manages Row Programming Fund. Former Kappa Sig social chair. Street Meat. FLiCKS, Day N Mayfield, Date Drop, Full Moon on The Quad, Faculty Houseparty, Row Trick or Treat, 'Rents Due. On working groups re: room reservations, housing assignment reform, and admin transparency. Loves to travel.</p>
         </div>
       </div>
       <div class="duo-card" data-tilt>
-        <div class="duo-photo" style="background:linear-gradient(145deg,#1a5c6b 40%,#5F9EA0);"><div class="duo-initial">E</div></div>
+        <div class="duo-photo"><img src="img/eva-headshot.jpg" alt="Eva" class="duo-photo-img"></div>
         <div class="duo-info">
           <span class="duo-role">Vice President</span>
           <h3 class="duo-name">Eva</h3>
-          <p class="duo-bio">Co-ran FMOTQ with Madhav both years. Crothers president running Crochella frosh year. Sophomore Formal at the Cantor. Farm Fridays, Notes from the Farm, Stanford Sierra Camp twice. Theta pledge mom.</p>
+          <p class="duo-bio">Co-ran FMOTQ with Madhav both years. Crothers president supporting Crochella frosh year. Sophomore Formal at the Cantor. Farm Fridays, Notes from the Farm, Stanford Sierra Camp twice. Theta pledge mom. Loves her dog, Boss, and the sun.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ROAD ═══ -->
+  <div class="road"><div class="road-lines"><span></span><span></span><span></span><span></span><span></span></div></div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE COVERS                                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="covers" id="covers">
+    <div class="section-header">
+      <h2 class="retro-text retro-text--yellow section-title">The Covers</h2>
+      <p class="section-sub section-sub--light">Iconic duos we've learned a little from.</p>
+    </div>
+    <div class="covers-grid">
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-1-dupe.jpg" alt="Madhav & Eva as Will Smith & Chris Rock" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-1-orig.jpg" alt="Will Smith Slaps Chris Rock" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">Will Smith Slaps Chris Rock</p>
+        <p class="cover-ref">94th Academy Awards, 2022</p>
+        <p class="cover-lesson">Not every reaction needs to be public—sometimes the strongest move is restraint.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-2-dupe.jpg" alt="Madhav & Eva as Bob Dylan" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-2-orig.jpg" alt="The Freewheelin' Bob Dylan" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">The Freewheelin' Bob Dylan</p>
+        <p class="cover-ref">Bob Dylan, 1963</p>
+        <p class="cover-lesson">Keep walking forward—even when it's unclear, uncomfortable, or a little cold.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-3-dupe.jpg" alt="Madhav & Eva as Keith Haring figures" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-3-orig.jpg" alt="Untitled, Keith Haring" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">Untitled (Radiant Figures with Heart)</p>
+        <p class="cover-ref">Keith Haring, c. 1980s</p>
+        <p class="cover-lesson">Even when everything feels loud and chaotic, leading with energy and heart still cuts through.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-4-dupe.jpg" alt="Madhav & Eva as Simon & Garfunkel in Central Park" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-4-orig.jpg" alt="The Concert in Central Park" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">The Concert in Central Park</p>
+        <p class="cover-ref">Simon & Garfunkel, 1981</p>
+        <p class="cover-lesson">When the moment is big, you rise to it—no matter the history.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-5-dupe.jpg" alt="Madhav & Eva as Simon & Garfunkel" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-5-orig.jpg" alt="Bridge Over Troubled Water" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">Bridge Over Troubled Water</p>
+        <p class="cover-ref">Simon & Garfunkel, 1970</p>
+        <p class="cover-lesson">Steadiness—especially when things feel uncertain—is what actually carries people through.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-6-dupe.jpg" alt="Madhav & Eva as The Two Fridas" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-6-orig.jpg" alt="The Two Fridas, Frida Kahlo" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">The Two Fridas</p>
+        <p class="cover-ref">Frida Kahlo, 1939</p>
+        <p class="cover-lesson">You don't have to simplify yourself to be understood—holding contradictions can be its own kind of clarity.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-7-dupe.jpg" alt="Madhav & Eva as Fleetwood Mac" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-7-orig.jpg" alt="Rumours, Fleetwood Mac" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">Rumours</p>
+        <p class="cover-ref">Fleetwood Mac, 1977</p>
+        <p class="cover-lesson">Even in the middle of absolute chaos, something iconic can come out of it.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-8-dupe.jpg" alt="Madhav & Eva as American Gothic" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-8-orig.jpg" alt="American Gothic, Grant Wood" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">American Gothic</p>
+        <p class="cover-ref">Grant Wood, 1930</p>
+        <p class="cover-lesson">We're learning the power of a straight face—whether you mean it or not.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-9-dupe.jpg" alt="Madhav & Eva as Step Brothers" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-9-orig.jpg" alt="Step Brothers" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">Step Brothers</p>
+        <p class="cover-ref">Step Brothers, 2008</p>
+        <p class="cover-lesson">If you're going to do something ridiculous, you might as well go all in.</p>
+      </div>
+      <div class="cover-card" data-flip>
+        <div class="cover-flipper">
+          <div class="cover-front">
+            <img src="img/cover-10-dupe.jpg" alt="Madhav & Eva as Wham!" class="cover-img-photo">
+          </div>
+          <div class="cover-back">
+            <img src="img/cover-10-orig.jpg" alt="Fantastic, Wham!" class="cover-img-photo">
+          </div>
+        </div>
+        <p class="cover-name">Fantastic</p>
+        <p class="cover-ref">Wham!, 1983</p>
+        <p class="cover-lesson">Energy, style, and just a little delusion can carry you very far.</p>
       </div>
     </div>
   </section>
@@ -287,7 +439,7 @@
       <p class="vote-eyebrow">Election Day</p>
       <h2 class="retro-text retro-text--red vote-heading">VOTE<br>MADHAV & EVA</h2>
       <p class="vote-dates">April 15 – 16, 2026</p>
-      <a href="#" class="vote-btn" id="vote-btn" data-magnetic>CAST YOUR VOTE ★</a>
+      <a href="https://www.assu.stanford.edu/elections" target="_blank" rel="noopener" class="vote-btn" id="vote-btn" data-magnetic>CAST YOUR VOTE ★</a>
     </div>
   </section>
 

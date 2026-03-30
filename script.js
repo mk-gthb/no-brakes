@@ -107,22 +107,6 @@ function initPlate() {
     });
   }
 
-  const charsEl = document.getElementById("plate-chars");
-  if (charsEl) {
-    const text = charsEl.textContent;
-    charsEl.innerHTML = "";
-    for (const ch of text) {
-      const span = document.createElement("span");
-      span.className = "stamp-char";
-      span.textContent = ch === " " ? "\u00A0" : ch;
-      charsEl.appendChild(span);
-    }
-    gsap.set(".stamp-char", {
-      opacity: 0,
-      y: -14,
-      scale: 1.2,
-    });
-  }
 }
 
 /* ═══ HERO ENTRANCE — PALM DRIVE ZOOM-TO-PLATE ═══ */
@@ -146,26 +130,43 @@ function initHero() {
   }, "-=0.4");
 
   if (!isSmall && carMain) {
+    gsap.set(".plate", { opacity: 0, scale: 0.8 });
+
     tl.to(carMain, {
-      opacity: 1, scale: 0.35,
-      duration: 0.3, ease: "power2.out",
+      opacity: 1, scale: 0.15,
+      duration: 0.3, ease: "power1.out",
     }, "-=0.1")
     .to(carMain, {
-      scale: 1.8, y: 50,
-      duration: 1.4, ease: "power2.in",
+      scale: 1.3, y: 40,
+      duration: 2.2, ease: "power1.inOut",
     })
+    .to({}, { duration: 0.2 })
+    // Car vanishes fast
     .to(carMain, {
-      scale: 8, y: 180, opacity: 0, filter: "blur(10px)",
+      opacity: 0,
       duration: 0.3, ease: "power3.in",
     })
-    .from(".plate", {
-      scale: 0.06, opacity: 0,
-      duration: 0.45, ease: "back.out(2.5)",
-    }, "-=0.15")
+    // Plate POPS in — overshoots then snaps back
+    .fromTo(".plate",
+      { opacity: 0, scale: 0.3 },
+      { opacity: 1, scale: 1.12, duration: 0.35, ease: "power4.out" },
+      "-=0.2"
+    )
+    .to(".plate", {
+      scale: 1,
+      duration: 0.5, ease: "elastic.out(1.2, 0.4)",
+    })
+    // NO BRAKES slams down
     .from(".hero-eyebrow", {
-      y: -20, opacity: 0,
-      duration: 0.3, ease: "back.out(1.7)",
-    }, "-=0.25");
+      y: -40, opacity: 0, scale: 1.4,
+      duration: 0.35, ease: "back.out(2.5)",
+    }, "-=0.3")
+    // Slogan punches up
+    .from(".hero-slogan", {
+      y: 30, opacity: 0, scale: 0.8,
+      duration: 0.4, ease: "back.out(2)",
+    }, "-=0.15")
+    .from(".hero-below", { y: 30, opacity: 0, duration: 0.3, ease: "back.out(1.5)" }, "-=0.1");
   } else {
     tl.from(".hero-eyebrow", {
       y: -20, opacity: 0,
@@ -177,35 +178,11 @@ function initHero() {
     }, "-=0.1");
   }
 
-  tl.from(".plate-state", { opacity: 0, duration: 0.3 }, "-=0.2")
-    .from(".plate-reg", {
-      scale: 0, opacity: 0, rotate: 12,
-      duration: 0.4, ease: "elastic.out(1,0.4)",
-    }, "-=0.15");
-
-  tl.to(".stamp-char", {
-    opacity: 1, y: 0, scale: 1,
-    duration: 0.18,
-    ease: "power4.out",
-  }, "+=0.06");
-
-  tl.to("#plate", {
-    y: 3, duration: 0.06, ease: "power2.out",
-    yoyo: true, repeat: 1,
-  }, "-=0.08");
-
   tl.fromTo("#plate-shine",
     { opacity: 0.9 },
     { opacity: 0, duration: 0.6, ease: "power2.out" },
     "-=0.1"
   );
-
-  tl.from(".plate-tagline", { opacity: 0, duration: 0.3 }, "+=0.03")
-    .from(".hero-slogan", {
-      y: 20, opacity: 0, scale: 0.9,
-      duration: 0.5, ease: "back.out(1.7)",
-    }, "-=0.1")
-    .from(".hero-below", { y: 25, opacity: 0, duration: 0.4 }, "-=0.15");
 }
 
 /* ═══ PLATFORM ═══ */
@@ -273,6 +250,10 @@ function initCovers() {
       ease: "elastic.out(1,0.5)",
     });
   });
+
+  document.querySelectorAll("[data-flip]").forEach((card) => {
+    card.addEventListener("click", () => card.classList.toggle("flipped"));
+  });
 }
 
 /* ═══ DUO ═══ */
@@ -313,7 +294,6 @@ function initConfetti() {
   const btn = document.getElementById("vote-btn");
   if (!btn) return;
   btn.addEventListener("click", (e) => {
-    e.preventDefault();
     const r = btn.getBoundingClientRect();
     const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
     const colors = ["#A41034", "#F5A623", "#FFFFFF", "#6B0A22", "#FDBE44"];
